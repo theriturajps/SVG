@@ -1,5 +1,4 @@
 User-agent: Googlebot
-Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 Sitemap: https://svg.riturajps.in/sitemap.xml
