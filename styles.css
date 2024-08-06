@@ -23,7 +23,28 @@ body {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
+img {
+  width: 50%;
+}
+
+p.subtitle.Pre {
+  display: block;
+  margin: 12px auto;
+  padding: 6px 12px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  width: 74px;
+  text-align: center;
+  border: none;
+  background: #091e3d;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  animation: bounce 1s ease-out 1s infinite;
+}
+
 .title {
+  margin-top: 1rem;
   font-size: 3rem;
   margin-bottom: 0.5rem;
   animation: fadeInDown 1s ease-out;
@@ -31,7 +52,7 @@ body {
 
 .subtitle {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   opacity: 0.8;
   animation: fadeInUp 1s ease-out 0.5s both;
 }
