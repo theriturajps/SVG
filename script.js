@@ -80,5 +80,5 @@ const onGetIcons = (icons) => {
     const icons = await fetch(options.url).then(res => res.ok ? res.json() : null);
     onGetIcons(icons);
 })({
-    url: "//svg.riturajps.in/svg-icons.json"
+    url: "./svg-icons.json"
 });
