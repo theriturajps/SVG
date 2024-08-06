@@ -56,7 +56,7 @@
 }
 .down-arrow {
   position: absolute;
-  top: 90vh;
+  top: 75vh;
   font-size: 30px;
   cursor: pointer;
   animation: bounce 2s infinite;
