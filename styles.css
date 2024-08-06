@@ -265,6 +265,10 @@ svg .line {
   .subtitle {
     font-size: 1rem;
   }
+
+  .down-arrow{
+    bottom: 40px;
+  }
 }
 
 @keyframes fadeInDown {
