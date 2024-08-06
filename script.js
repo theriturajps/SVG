@@ -1,4 +1,5 @@
 // script.js
+
 function toastNotif(message) {
     const toast = document.getElementById('toastNotif');
     toast.innerHTML = `<span>${message}</span>`;
@@ -10,10 +11,10 @@ function toastNotif(message) {
 
 const renderUI = (target, icons) => {
     target.innerHTML = (`
-      <p class="note">Click on the icon to copy its SVG code.</p>
-      <input placeholder="Search among ${icons.length} icons..." class="iCIn" id="iCInQu" type="text"/>
-      <div id="iCHe"></div>
-      <div class="iCCon" id="iCCtr"></div>
+        <p class="note">Click on the icon to copy its SVG code.</p>
+        <input placeholder="Search among ${icons.length} icons..." class="iCIn" id="iCInQu" type="text"/>
+        <div id="iCHe"></div>
+        <div class="iCCon" id="iCCtr"></div>
     `);
     const input = document.getElementById("iCInQu");
     const iconsContainer = document.getElementById("iCCtr");
@@ -37,7 +38,6 @@ const renderUI = (target, icons) => {
         if (filteredIcons.length === 0) {
             iconsHeader.innerHTML = `<p class="note">Nothing to see here...</p>`;
         } else {
-
             filteredIcons.forEach((icon) => {
                 const button = document.createElement("button");
                 Object.assign(button, {
@@ -58,9 +58,8 @@ const renderUI = (target, icons) => {
                 });
                 iconsContainer.appendChild(button);
             });
-
         }
-    }
+    };
 
     input.addEventListener("input", (e) => {
         showIconResults(e.target.value);
@@ -73,6 +72,7 @@ const onGetIcons = (icons) => {
     if (!icons) {
         return null;
     }
+    document.getElementById('exploreButton').textContent = `Explore ${icons.length} SVG Icons`;
     renderUI(document.getElementById("iC"), icons);
 };
 
