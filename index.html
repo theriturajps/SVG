@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Icon Collection - View and Copy Icons Easily</title>
@@ -25,35 +25,48 @@
     <link rel="icon" type="image/png" href="./favicon.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+  </head>
+  <body>
     <div id="toastNotif" class="toast"></div>
-    <div id="iC" class="iCWr">
-        <p class='note'>Icons are being loaded. Please wait..</p>
+    <div class="banner">
+      <h1>SVG Icon Collection</h1>
+      <p>View and Copy Icons Easily</p>
+      <button class="scroll-button" onclick="scrollToContent()">Explore</button>
+      <div class="down-arrow" onclick="scrollToContent()">⬇️</div>
     </div>
+    <div id="iC" class="iCWr">
+      <p class='note'>Icons are being loaded. Please wait..</p>
+    </div>
+    <script>
+      function scrollToContent() {
+        document.getElementById('iC').scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    </script>
     <script src="./script.js"></script>
     <!-- Schema.org JSON-LD Markup for Rich Snippets -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Icon Viewer - View and Copy Icons Easily",
-      "description": "Icon Viewer - A simple tool to View and Copy icons quickly and easily.",
-      "url": "https://svg.riturajps.in",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYTO9aAIXTPC3XyBAjUxMPkPTCbGxlTMkpHDep0pBGlUnLlHHN_HoEckjHd_MhPh2VQIpZQfgPiPGB6P1gNMIChMhpIHXOJM3Chf7Ypj9Ou1HXCN_qITS8fWy8MdBoinTX5JPuxxMaDuOrWP2kd3uC0eVhOMvv2IYuHtIxpj9xKU2K4j_Ze9Q5dven3lyQ/s1600/riturajps.png",
-      "author": {
-        "@type": "Person",
-        "name": "Ritu Raj Pratap Singh"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Ritu Raj's Insights",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYTO9aAIXTPC3XyBAjUxMPkPTCbGxlTMkpHDep0pBGlUnLlHHN_HoEckjHd_MhPh2VQIpZQfgPiPGB6P1gNMIChMhpIHXOJM3Chf7Ypj9Ou1HXCN_qITS8fWy8MdBoinTX5JPuxxMaDuOrWP2kd3uC0eVhOMvv2IYuHtIxpj9xKU2K4j_Ze9Q5dven3lyQ/s1600/riturajps.png"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Icon Viewer - View and Copy Icons Easily",
+        "description": "Icon Viewer - A simple tool to View and Copy icons quickly and easily.",
+        "url": "https://svg.riturajps.in",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYTO9aAIXTPC3XyBAjUxMPkPTCbGxlTMkpHDep0pBGlUnLlHHN_HoEckjHd_MhPh2VQIpZQfgPiPGB6P1gNMIChMhpIHXOJM3Chf7Ypj9Ou1HXCN_qITS8fWy8MdBoinTX5JPuxxMaDuOrWP2kd3uC0eVhOMvv2IYuHtIxpj9xKU2K4j_Ze9Q5dven3lyQ/s1600/riturajps.png",
+        "author": {
+          "@type": "Person",
+          "name": "Ritu Raj Pratap Singh"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ritu Raj's Insights",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYTO9aAIXTPC3XyBAjUxMPkPTCbGxlTMkpHDep0pBGlUnLlHHN_HoEckjHd_MhPh2VQIpZQfgPiPGB6P1gNMIChMhpIHXOJM3Chf7Ypj9Ou1HXCN_qITS8fWy8MdBoinTX5JPuxxMaDuOrWP2kd3uC0eVhOMvv2IYuHtIxpj9xKU2K4j_Ze9Q5dven3lyQ/s1600/riturajps.png"
+          }
         }
       }
-    }
     </script>
-</body>
+  </body>
 </html>

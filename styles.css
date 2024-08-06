@@ -1,129 +1,204 @@
-/* styles.css */
-.note{position:relative;padding:16px 20px 16px 50px; background:#e1f5fe;color:#3c4043; font-size:.85rem;line-height:1.6em;border-radius:10px;overflow:hidden} .note::before{content:'';width:60px;height:60px;background:#81b4dc;display:block;border-radius:50%;position:absolute;top:-12px;left:-12px;opacity:.1} .note::after{content:'\002A';position:absolute;left:18px;top:16px; font-size:20px; min-width:15px;text-align:center}
+.note {
+  position: relative;
+  padding: 16px 20px 16px 50px;
+  background: #e1f5fe;
+  color: #3c4043;
+  font-size: 0.85rem;
+  line-height: 1.6em;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.note::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: #81b4dc;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  opacity: 0.1;
+}
+.note::after {
+  content: "\002A";
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  font-size: 20px;
+  min-width: 15px;
+  text-align: center;
+}
+
 .iCWr > * {
-    margin: 0;
+  margin: 0;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+.scroll-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 0.4em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #056aff;
+  color: #ffffff;
+}
+.down-arrow {
+  position: absolute;
+  bottom: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .iCWr {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .iCIn {
-    color: #2F353B;
-    outline: none;
-    background: transparent;
-    padding: 15px;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    box-shadow: 2px 2px 0 0 #056aff;
+  color: #2f353b;
+  outline: none;
+  background: transparent;
+  padding: 15px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 0 #056aff;
 }
 
 .iCCon {
-    counter-reset: num-icon;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-    gap: 10px;
+  counter-reset: num-icon;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 10px;
 }
 
 @media (max-width: 992px) {
-    .iCCon {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
-    }
+  .iCCon {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+  }
 }
 
 @media (max-width: 576px) {
-    .iCCon {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    }
+  .iCCon {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  }
 }
 
 .iCCon > * {
-    counter-increment: num-icon;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    background: transparent;
-    padding: 15px;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    box-shadow: 2px 2px 0 0 #056aff;
-    overflow: hidden;
+  counter-increment: num-icon;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  padding: 15px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 0 #056aff;
+  overflow: hidden;
 }
 
 .iCCon > *::before {
-    content: counter(num-icon);
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #056aff;
-    color: #fff;
-    font-size: 11px;
-    border-radius: 0 0 0 5px;
-    padding: 0 2px;
-    opacity: 0.6;
+  content: counter(num-icon);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #056aff;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 0 0 0 5px;
+  padding: 0 2px;
+  opacity: 0.6;
 }
 
 .iCCon > * svg {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
 }
 
 .iCCon > * span {
-    text-align: left;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    padding-left: 10px;
-    opacity: 0.8;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  text-align: left;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+  opacity: 0.8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-svg.line, svg .line {
-    fill: none !important;
-    stroke: #08102b;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 1;
+svg.line,
+svg .line {
+  fill: none !important;
+  stroke: #08102b;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1;
 }
 
-.is-dark svg.line, .is-dark svg {
-    fill: none;
-    stroke: #fffdfc;
+.is-dark svg.line,
+.is-dark svg {
+  fill: none;
+  stroke: #fffdfc;
 }
 
 .is-dark span {
-    color: #fffdfc;
+  color: #fffdfc;
 }
 
 .is-dark svg {
-    fill: #fffdfc;
+  fill: #fffdfc;
 }
 
 .is-dark .iCIn {
-    color: #f6f7f8;
+  color: #f6f7f8;
 }
 
 .toast {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 16px;
-    border-radius: 4px;
-    text-align: center;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .toast span {
-    display: block;
+  display: block;
 }
