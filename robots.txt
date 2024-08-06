@@ -1,0 +1,4 @@
+User-agent: Googlebot
+User-agent: *
+Allow: /
+Sitemap: https://svg.riturajps.in/sitemap.xml
