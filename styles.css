@@ -54,13 +54,15 @@
   background: #056aff;
   color: #ffffff;
 }
+
 .down-arrow {
-  position: absolute;
-  top: 75vh;
-  font-size: 30px;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-}
+    position: absolute;
+    top: 75vh;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+  }
 @keyframes bounce {
   0%,
   20%,
