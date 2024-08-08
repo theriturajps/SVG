@@ -78,5 +78,5 @@ const onGetIcons = (icons) => {
     const icons = await fetch(options.url).then(res => res.ok ? res.json() : null);
     onGetIcons(icons);
 })({
-    url: "./svg-icons.json"
+    url: "../../data/svg-icons.json"
 });

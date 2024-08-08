@@ -127,6 +127,7 @@ p.subtitle.Pre {
   flex-direction: column;
   gap: 20px;
   padding: 10px;
+  margin-bottom: 2em;
 }
 
 .iCWr > * {
