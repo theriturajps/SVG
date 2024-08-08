@@ -80,3 +80,21 @@ const onGetIcons = (icons) => {
 })({
     url: "../../data/svg-icons.json"
 });
+
+console.log(`
+SVG Icon Collection
+> This website is managed by %cRitu Raj%c
+> For more information, visit the website.
+  >> %cInstagram:%c @riturajps
+  >> %cWebsite:%c www.riturajps.in
+  >> %cTelegram:%c @riturajps
+  >> %cTwitter:%c @riturajps
+  >> %cEmail:%c owner@patna.eu.org
+`, 
+'font-weight: bold;', '', 
+'font-weight: bold;', '', 
+'font-weight: bold;', '', 
+'font-weight: bold;', '', 
+'font-weight: bold;', '', 
+'font-weight: bold;', ''
+);
